@@ -1,0 +1,14 @@
+.echo-avatar-container {
+  cursor: pointer;
+
+  .echo-avatar-pre {
+    display: flex;
+    justify-content: center;
+  }
+
+  .echo-avatar-sub {
+    margin-top: var(--spacing-small);
+    display: flex;
+    justify-content: center;
+  }
+}

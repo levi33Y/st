@@ -1,0 +1,40 @@
+import axios from "axios";
+import { ElMessage } from "element-plus";
+import config from "../../config";
+import { useAppStore } from "../../stores/useAppStore";
+
+export const Api = axios.create({
+  baseURL: config.baseURL,
+  timeout: 50000,
+  headers: {
+    "Content-Type": "application/json",
+  },
+});
+
+Api.interceptors.request.use((config) => {
+  if (!config.headers.Authorization) {
+    const appStore = useAppStore();
+    config.headers.Authorization = `Bearer ${appStore.access_token}`;
+  }
+  return config;
+});
+
+Api.interceptors.response.use(
+  (response) => {
+    return response;
+  },
+  (error) => {
+    if (error?.response?.status === 401) {
+      window.electronAPI.logout();
+      return;
+    }
+    const errorStr =
+      error?.response?.data?.error ?? error?.message ?? error?.toString() ?? "";
+    errorStr &&
+      ElMessage({
+        offset: 50,
+        message: errorStr,
+        type: "error",
+      });
+  },
+);

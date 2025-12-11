@@ -1,0 +1,101 @@
+{
+  "name": "sugartalk",
+  "version": "9.9.9",
+  "productName": "SugarTalk",
+  "main": "dist-electron/main/index.js",
+  "description": "sugar talk meeting",
+  "author": "sugartalk",
+  "license": "Apache-2.0",
+  "scripts": {
+    "dev": "vite --force",
+    "build": "VITE_APP_ENV=production vite build && electron-builder --config ./electron-builder.yaml --universal",
+    "build-win": "cross-env VITE_APP_ENV=production vite build && electron-builder --win --config ./electron-builder.yaml",
+    "build-test": "rm -rf release/ && VITE_APP_ENV=development vite build && electron-builder --config ./electron-test-builder.yaml --universal",
+    "build-win-test": "cross-env VITE_APP_ENV=development vite build && electron-builder --win --config ./electron-test-builder.yaml",
+    "preview": "vite preview",
+    "postinstall": "patch-package && node scripts/postinstall.js"
+  },
+  "keywords": [
+    "electron",
+    "rollup",
+    "vite",
+    "vue3",
+    "vue"
+  ],
+  "bugs": {
+    "url": "https://github.com/SugarChat/SugarTalk/issues"
+  },
+  "homepage": "https://github.com/SugarChat/SugarTalk",
+  "debug": {
+    "env": {
+      "VITE_DEV_SERVER_URL": "http://127.0.0.1:5173/"
+    }
+  },
+  "devDependencies": {
+    "@types/fabric": "^5.3.3",
+    "@types/file-saver": "^2.0.7",
+    "@types/html-pdf": "^3.0.3",
+    "@types/uuid": "^9.0.2",
+    "@types/video.js": "^7.3.58",
+    "@vitejs/plugin-vue": "^4.1.0",
+    "cross-env": "^10.1.0",
+    "electron": "^25.4.0",
+    "electron-builder": "^24.6.3",
+    "path-browserify": "^1.0.1",
+    "sass": "^1.60.0",
+    "typescript": "^5.0.2",
+    "video.js": "^8.23.4",
+    "vite": "^4.1.4",
+    "vite-plugin-electron": "^0.11.1",
+    "vite-plugin-electron-renderer": "^0.13.14",
+    "vite-plugin-html": "^3.2.0",
+    "vue-tsc": "2.0.24"
+  },
+  "dependencies": {
+    "@arms/js-sdk": "^1.8.36-beta.13",
+    "@element-plus/icons-vue": "^2.3.1",
+    "@tencentcloud/chat": "3.5.6",
+    "@types/fluent-ffmpeg": "^2.1.28",
+    "@vueuse/core": "^13.0.0",
+    "axios": "^1.4.0",
+    "child_process": "^1.0.2",
+    "dayjs": "^1.11.9",
+    "docxtemplater": "^3.46.0",
+    "electron-dl": "^3.5.2",
+    "electron-log": "^5.3.1",
+    "electron-updater": "^6.6.2",
+    "element-plus": "^2.3.3",
+    "fabric": "^5.3.0",
+    "ffmpeg-static": "^5.2.0",
+    "ffprobe-static": "^3.1.0",
+    "file-saver": "^2.0.5",
+    "fluent-ffmpeg": "^2.1.3",
+    "fs-extra": "^11.2.0",
+    "html-pdf": "^3.0.1",
+    "jspdf": "^2.5.1",
+    "livekit-client": "^1.12.3",
+    "lodash": "^4.17.21",
+    "loudness": "^0.4.1",
+    "marked": "^15.0.12",
+    "mitt": "^3.0.1",
+    "moment": "^2.30.1",
+    "moment-timezone": "^0.5.45",
+    "native-ext-loader": "^2.3.0",
+    "normalize.css": "^8.0.1",
+    "patch-package": "^8.0.0",
+    "pinia": "^2.1.6",
+    "pinia-plugin-persistedstate": "^3.2.0",
+    "pizzip": "^3.1.7",
+    "postinstall-postinstall": "^2.1.0",
+    "tim-upload-plugin": "^1.4.2",
+    "trtc-electron-sdk": "^12.6.705",
+    "uuid": "^9.0.0",
+    "vite-plugin-resolve": "^2.5.2",
+    "vue": "^3.5.13",
+    "vue-router": "^4.2.4",
+    "xlsx": "^0.18.5"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

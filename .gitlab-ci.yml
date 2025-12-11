@@ -1,0 +1,23 @@
+# You can override the included template(s) by including variable overrides
+# SAST customization: https://docs.gitlab.com/ee/user/application_security/sast/#customizing-the-sast-settings
+# Secret Detection customization: https://docs.gitlab.com/ee/user/application_security/secret_detection/#customizing-settings
+# Note that environment variables can be set in several places
+# See https://docs.gitlab.com/ee/ci/variables/#priority-of-environment-variables
+stages:
+  - test
+
+sast:
+  stage: test
+
+workflow:
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "master"'
+
+include:
+  - template: Security/SAST.gitlab-ci.yml
+  - template: Dependency-Scanning.gitlab-ci.yml
+  - template: Security/Secret-Detection.gitlab-ci.yml
+
+security-code-scan-sast:
+  variables:
+    SAST_ANALYZER_IMAGE_TAG: 3

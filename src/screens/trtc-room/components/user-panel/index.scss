@@ -1,0 +1,54 @@
+.user-panel {
+  position: relative;
+
+  --height-difference: 175px;
+
+  height: calc(100vh - 143px);
+  padding: 16px;
+  box-sizing: border-box;
+
+  .user-list-container-normal {
+    background-color: var(--background-color-theme);
+    min-height: calc(100vh - var(--height-difference));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .user-list-container-video {
+    min-height: calc(100vh - 143px);
+    display: grid;
+  }
+
+  /* 二分屏幕布局 */
+  .two-panes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* 四分屏幕布局 */
+  .four-panes {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  /* 九分屏幕布局 */
+  .nine-panes {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  /* 十六分屏幕布局 */
+  .sixteen-panes {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+
+  /* 默认布局 */
+  .default-layout {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(300px, 1fr)
+    ); /* 动态调整列数 */
+  }
+}

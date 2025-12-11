@@ -1,0 +1,60 @@
+.container {
+  height: 100%;
+  padding: var(--spacing-small);
+  display: flex;
+  justify-content: space-between;
+
+  :deep(.el-input__wrapper) {
+    border-radius: var(--border-radius-large);
+  }
+
+  > div {
+    &:nth-child(1) {
+      width: 308px;
+      overflow-x: auto;
+      padding: var(--spacing-small);
+    }
+
+    &:nth-child(2) {
+      height: auto;
+      width: 0;
+      border-right: 1px solid var(--border-color-light);
+    }
+
+    &:nth-child(3) {
+      width: 308px;
+      overflow-x: auto;
+      padding: var(--spacing-small);
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      row-gap: var(--spacing-small-medium);
+    }
+  }
+
+  .form-list-item {
+    display: flex;
+    align-items: center;
+    column-gap: var(--spacing-small-medium);
+    padding-bottom: var(--spacing-small-medium);
+
+    > span {
+      margin-right: auto;
+    }
+  }
+
+  .transfer-pre {
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--spacing-small-medium);
+  }
+}
+
+.tree-node {
+  display: flex;
+  align-items: center;
+}
+
+::v-deep(.el-tree-node__content) {
+  height: 40px;
+}

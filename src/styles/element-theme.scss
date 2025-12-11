@@ -1,0 +1,18 @@
+//修改全局主题样式
+@forward "element-plus/theme-chalk/src/common/var.scss" with (
+  $colors: (
+    "primary": (
+      "base": #475aec,
+    ),
+  ),
+  // 修改全局圆角变量
+  $border-radius: (
+      "base": 8px,
+      // 修改为您想要的全局圆角大小
+      "small": 4px,
+      "round": 12px,
+      "circle": 50%,
+      // 修改为您想要的圆形大小
+    )
+);
+@use "element-plus/theme-chalk/src/index.scss" as *;

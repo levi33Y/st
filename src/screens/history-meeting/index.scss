@@ -1,0 +1,65 @@
+.container {
+  .search-meeting {
+    padding: 16px 24px;
+    height: 70px;
+  }
+
+  .meeting-list {
+    .meeting-list-date {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 24px;
+      width: 100%;
+      height: 36px;
+      background: #fafaff;
+      .month {
+        color: var(--color-primary);
+      }
+      .year {
+        color: var(--color-text-secondary);
+      }
+    }
+    .meeting-list-content {
+      padding: 16px 24px;
+      .history-number {
+        color: var(--color-text-secondary);
+      }
+      .history-title-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 8px 0;
+        .meeting-detail {
+          width: 36px;
+          height: 20px;
+          font-size: var(--font-size-extra-small);
+          border-radius: var(--border-radius-base);
+        }
+      }
+      .history-message {
+        color: var(--color-text-secondary);
+        .time {
+          margin-right: var(--spacing-medium);
+        }
+      }
+    }
+    .meeting-list-content:hover {
+      background: var(--background-color-select);
+    }
+  }
+
+  ::v-deep(.el-form-item) {
+    width: 100%;
+
+    .el-checkbox {
+      display: flex;
+      align-items: center;
+      font-weight: var(--font-weight-secondary);
+    }
+    .el-input__wrapper {
+      height: 40px;
+      border-radius: var(--border-radius-large);
+    }
+  }
+}

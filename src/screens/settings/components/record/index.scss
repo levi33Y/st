@@ -1,0 +1,37 @@
+.record-container {
+  display: flex;
+  flex-direction: column;
+
+  .title {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-black);
+    margin: 0 0 var(--spacing-small) 0;
+  }
+
+  .path-section {
+    display: flex;
+    width: 100%;
+    gap: var(--spacing-medium);
+
+    .path-display {
+      flex: 1;
+      .path-input {
+        width: 100%;
+      }
+    }
+
+    .button-group {
+      display: flex;
+    }
+  }
+
+  .tip-text {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-tiny);
+    font-size: 12px;
+    color: var(--color-text-secondary);
+    margin: 0;
+  }
+}

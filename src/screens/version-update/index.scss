@@ -1,0 +1,106 @@
+.header {
+  height: 50px;
+  flex: 0 0 50px;
+
+  ::v-deep(.right) {
+    padding-right: var(--spacing-tiny);
+  }
+}
+
+.container {
+  padding: 1rem 1.5rem;
+}
+
+.container-header {
+  display: flex;
+  align-items: center;
+}
+
+.header-info {
+  margin-left: 1.5rem;
+}
+
+.update-header {
+  display: flex;
+}
+
+.sugartalk {
+  height: 2.25rem;
+  font-family:
+    SF Pro Display,
+    SF Pro Display;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #282838;
+  line-height: 2.25rem;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+}
+
+.version {
+  margin-left: 0.88rem;
+  margin-top: 0.6rem;
+  height: 1.31rem;
+  font-family:
+    SF Pro Display,
+    SF Pro Display;
+  font-weight: 400;
+  font-size: 0.88rem;
+  color: #5a5b6d;
+  line-height: 1.31rem;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+}
+
+.update-content {
+  height: 2.63rem;
+  font-family:
+    SF Pro Display,
+    SF Pro Display;
+  color: #5a5b6d;
+  line-height: 1.31rem;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+}
+
+.container-content {
+  width: 100%;
+  margin-top: 1rem;
+  min-height: 12rem;
+  max-height: 12rem;
+  border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+  border: 0.06rem solid #dddde9;
+  padding: 0.5rem 2rem;
+  color: #5a5b6d;
+  font-weight: 400;
+  font-size: 0.88rem;
+  line-height: 1.31rem;
+  text-align: left;
+  font-style: normal;
+  overflow-wrap: break-word;
+  overflow: auto;
+}
+
+.update-btn {
+  padding: 1.2rem 1.5rem;
+  font-weight: 200;
+  font-size: 1rem;
+  color: #eef0ff;
+}
+
+.border-bottom {
+  border-top: var(--border-width-base) solid var(--border-color-light);
+}
+
+.container-bottom {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.container-bottom .el-progress {
+  width: 90%;
+}

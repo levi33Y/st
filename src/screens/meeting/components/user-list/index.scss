@@ -1,0 +1,80 @@
+.user-list-container {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  width: 176px;
+  height: 100%;
+  padding: 54px 0;
+  background: linear-gradient(to right, #525559, #232527);
+  transition: width 0.3s;
+  z-index: var(--status-bar-index);
+
+  &.nuactive {
+    transition-duration: 0s;
+  }
+
+  ::v-deep(.el-scrollbar) {
+    width: 100%;
+  }
+
+  .user-box-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  .expand-btn {
+    position: absolute;
+    top: 50%;
+    left: -16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 40px;
+    margin-top: -20px;
+    background-color: #2c2e2f;
+    border-radius: var(--border-radius-base) 0 0 var(--border-radius-base);
+    cursor: pointer;
+
+    .iconfont {
+      color: var(--color-text-secondary);
+      font-size: var(--font-size-base);
+      transition: all 0.3s;
+
+      &.active {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .drag-resize {
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    width: 8px;
+    height: 24px;
+    margin-top: -12px;
+    cursor: col-resize;
+    z-index: 2;
+    user-select: none;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background-color: #a3a4a6;
+    }
+
+    &::before {
+      left: 2px;
+    }
+
+    &::after {
+      left: 5px;
+    }
+  }
+}

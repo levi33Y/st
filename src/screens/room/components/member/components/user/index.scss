@@ -1,0 +1,50 @@
+.member-user-item {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  padding: 0 var(--spacing-small);
+
+  &:hover {
+    background-color: var(--color-primary-lighter);
+  }
+
+  .user-info {
+    flex: 1;
+    padding-left: var(--spacing-smaller);
+  }
+  .remove-user {
+    padding-left: var(--spacing-smaller);
+    cursor: pointer;
+  }
+
+  .mic-mute-status {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.disabled {
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        transform-origin: center;
+        transform: rotate(45deg);
+      }
+
+      &::before {
+        left: calc(50% - 2px);
+        width: 3px;
+        background-color: var(--background-color-base);
+      }
+
+      &::after {
+        left: calc(50% - 1px);
+        width: 1px;
+        background-color: var(--color-danger);
+      }
+    }
+  }
+}

@@ -1,0 +1,73 @@
+# /**
+#  * @see https://www.electron.build/configuration/configuration
+#  */
+{
+  productName: "SugarTalkTest",
+  appId: "org.erb.sugartalk.test",
+  asar: true,
+  asarUnpack:
+    [
+      "**\\*.{node,dll,exe}",
+      "**/node_modules/ffmpeg-static/**",
+      "**/node_modules/ffprobe-static/**",
+    ],
+  icon: "public/favicon.png",
+  directories: { output: "release" },
+  files:
+    [
+      "dist-electron",
+      "dist",
+      "!node_modules/trtc-electron-sdk/build/mac-framework",
+    ],
+  publish:
+    [
+      {
+        provider: "generic",
+        url: "https://sugartalk-client.testomenow.com",
+        "channel": "latest",
+      },
+    ],
+  mac:
+    {
+      artifactName: "${productName}_mac.${ext}",
+      target: [{ target: "default", arch: "universal" }],
+      mergeASARs: false,
+      hardenedRuntime: true,
+      entitlements: "public/entitlements.mac.plist",
+      entitlementsInherit: "public/entitlements.mac.plist",
+      gatekeeperAssess: false,
+      cscLink: "public/sugartalk.p12",
+      extendInfo:
+        {
+          NSMicrophoneUsageDescription: "SugarTalk將會在您使用發起會議、加入會議等功能時使用您的麥克風",
+          NSCameraUsageDescription: "SugarTalk將會在您使用發起會議、加入會議等功能時使用您的攝像頭",
+        },
+      "extraFiles":
+        [
+          {
+            "from": "node_modules/trtc-electron-sdk/build/mac-framework/${arch}/",
+            "to": "./Frameworks",
+          },
+        ],
+    },
+  win:
+    {
+      target: [{ target: "nsis", arch: ["x64"] }],
+      artifactName: "${productName}_win.${ext}",
+      extraFiles:
+        [
+          {
+            "from": "node_modules/trtc-electron-sdk/build/Release/",
+            "to": "./resources",
+            "filter": ["**/*"],
+          },
+        ],
+    },
+  nsis:
+    {
+      oneClick: false,
+      perMachine: false,
+      allowToChangeInstallationDirectory: true,
+      deleteAppDataOnUninstall: false,
+    },
+}

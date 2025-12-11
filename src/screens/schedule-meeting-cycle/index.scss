@@ -1,0 +1,16 @@
+.container {
+  flex: 1;
+  height: 100%;
+  width: 100%;
+  padding: var(--spacing-small) var(--spacing-medium);
+
+  .embedded-item {
+    width: 45%;
+    display: flex;
+    column-gap: var(--spacing-small);
+
+    .form-item {
+      flex: 1;
+    }
+  }
+}

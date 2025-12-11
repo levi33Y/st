@@ -1,0 +1,22 @@
+.confirm-container {
+  display: flex;
+  height: 180px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f8f8ff;
+  .title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-primary);
+  }
+  .button {
+    position: absolute;
+    bottom: 24px;
+  }
+  .el-button {
+    width: 100px;
+  }
+}

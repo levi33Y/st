@@ -1,0 +1,54 @@
+@keyframes flash-animation {
+  0% {
+    background-color: transparent;
+    color: inherit;
+  }
+  50% {
+    background-color: var(--color-primary);
+    color: white;
+  }
+  100% {
+    background-color: transparent;
+    color: inherit;
+  }
+}
+
+.intelligent-result {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.31rem;
+
+  .result-list {
+    display: flex;
+    line-height: 22px;
+
+    .result-text {
+      display: flex;
+      column-gap: 1rem;
+
+      .result-avatar {
+        flex-shrink: 0;
+      }
+
+      .result-main {
+        flex: 1;
+      }
+    }
+  }
+}
+
+.text-primary {
+  color: var(--color-text-primary);
+}
+
+.text-secondary {
+  color: var(--color-text-secondary);
+
+  .text-origin {
+    cursor: pointer;
+  }
+}
+
+.flash {
+  animation: flash-animation 1s ease-in-out;
+}

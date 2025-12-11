@@ -1,0 +1,12 @@
+.tabs-container {
+  height: 100%;
+  border-left: 1px solid var(--border-color-light);
+
+  :deep(.el-tabs__nav-scroll) {
+    padding: 0 1rem;
+  }
+
+  :deep(.el-tab-pane) {
+    height: 100%;
+  }
+}

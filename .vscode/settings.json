@@ -1,0 +1,73 @@
+{
+  // vscode默认启用了根据文件类型自动设置tabsize的选项
+  "editor.detectIndentation": false,
+  // 重新设定tabsize
+  "editor.tabSize": 2,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // #每次保存的时候将代码按eslint格式进行修复
+  "eslint.autoFixOnSave": true,
+  // 添加 vue 支持
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  //  #分号
+  "prettier.semi": true,
+  //  #使用单引号替代双引号
+  "prettier.singleQuote": false,
+  //  #让函数(名)和后面的括号之间加个空格
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+  // #缩进字节数
+  "prettier.tabWidth": 2,
+  // #缩进不使用tab，使用空格
+  "prettier.useTabs": false,
+  // #在对象，数组括号与文字之间加空格
+  "prettier.bracketSpacing": true,
+  // #末尾空行
+  "prettier.endOfLine": "auto",
+  "prettier.htmlWhitespaceSensitivity": "ignore",
+  // #在jsx中使用单引号代替双引号
+  "prettier.jsxSingleQuote": false,
+  "prettier.trailingComma": "all",
+
+  // #这个按用户自身习惯选择
+  "vetur.validation.script": false,
+  "vetur.format.defaultFormatter.html": "js-beautify-html",
+  "vetur.format.defaultFormatter.js": "vscode-typescript",
+  "vetur.format.defaultFormatterOptions": {
+    "js-beautify-html": {
+      "wrap_attributes": "auto"
+    },
+    "prettyhtml": {
+      "printWidth": 100,
+      "singleQuote": false,
+      "wrapAttributes": false,
+      "sortAttributes": false
+    }
+  },
+  // "window.zoomLevel": 1,
+  "beautify.config": {
+    "brace_style": "preserve-inline"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "[typescript]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "never"
+    }
+  },
+  "explorer.confirmDelete": false,
+  "editor.fontLigatures": false,
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.minimap.enabled": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "editor.wordWrap": "on",
+  "settingsSync.ignoredExtensions": [],
+  "editor.maxTokenizationLineLength": 1e36,
+  "git.ignoreMissingGitWarning": true,
+  "editor.fontSize": 14,
+  "editor.formatOnSave": true
+}

@@ -1,0 +1,46 @@
+.footer {
+  position: relative;
+  height: 85px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  z-index: var(--status-bar-index);
+  background-color: white;
+
+  .footer-left {
+    position: absolute;
+    display: flex;
+    padding-left: 12px;
+    box-sizing: border-box;
+
+    ::v-deep(.box-item) {
+      margin-right: 24px;
+    }
+  }
+
+  .footer-content {
+    flex: 1;
+    min-height: 1px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0 124px;
+    height: 66px;
+
+    ::v-deep(> div) {
+      margin: 0 12px;
+    }
+  }
+
+  .footer-right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 12px;
+  }
+}

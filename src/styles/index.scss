@@ -1,0 +1,143 @@
+@import "./animation.css";
+@import "./var.css";
+
+// :root {
+//   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+//   line-height: 1.5;
+//   font-weight: 400;
+
+//   color-scheme: light dark;
+//   color: rgba(255, 255, 255, 0.87);
+//   background-color: #242424;
+
+//   font-synthesis: none;
+//   text-rendering: optimizeLegibility;
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+//   -webkit-text-size-adjust: 100%;
+// }
+
+body {
+  overflow: hidden;
+  font-family: var(--font-family);
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  font-size: var(--font-size-base);
+  color: var(--color-text-primary);
+}
+
+// @media (prefers-color-scheme: light) {
+//   :root {
+//     color: #213547;
+//     background-color: #ffffff;
+//   }
+//   a:hover {
+//     color: #747bff;
+//   }
+//   button {
+//     background-color: #f9f9f9;
+//   }
+//   code {
+//     background-color: #f9f9f9;
+//   }
+// }
+
+.custom-dialog {
+  border-radius: var(--border-radius-large) !important;
+  overflow: hidden;
+
+  .el-dialog__header {
+    display: none;
+  }
+
+  .el-dialog__body {
+    padding: 0 !important;
+  }
+}
+.el-popper {
+  border-radius: var(--border-radius-large) !important;
+}
+.el-button.el-button--danger.is-plain {
+  --el-button-bg-color: var(--color-white);
+}
+.el-button.el-button--primary.is-plain {
+  --el-button-bg-color: var(--color-white);
+}
+
+.center-el-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  top: 50% !important;
+  height: 97px;
+  width: 97px !important;
+  background-color: rgb(40, 40, 56, 0.85) !important;
+  .el-icon {
+    margin: 0;
+    font-size: 28px;
+  }
+  .el-message__content {
+    padding-top: 14px;
+    color: #ffffff !important;
+  }
+}
+
+.el-message-box {
+  min-height: 180px;
+  width: 330px !important;
+  background-color: #f8f8ff !important;
+  .el-message-box__content {
+    margin-top: 24px;
+  }
+  .el-message-box__btns {
+    margin-top: 24px;
+    .el-button {
+      width: 100px;
+    }
+  }
+}
+.el-message-box-prompt {
+  .el-message-box__content {
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .el-message-box__btns {
+    margin-top: 0;
+  }
+}
+
+.el-overlay-message-box {
+  .el-message-box__title {
+    font-weight: 600;
+  }
+
+  .el-button {
+    width: 60px !important;
+    padding: 0;
+    border-radius: 10px;
+    font-weight: 400;
+  }
+
+  .confirm-button {
+    background-color: #475aec;
+    color: #ffffff;
+  }
+
+  .cancel-button {
+    background-color: #e7e7e7;
+    color: #000000;
+  }
+}

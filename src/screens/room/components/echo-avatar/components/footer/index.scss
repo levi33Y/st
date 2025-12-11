@@ -1,0 +1,48 @@
+.echo-avatar-footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 96px;
+  height: 96px;
+  border-top: var(--border-width-base) solid var(--border-color-light);
+
+  .speaking-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 292px;
+    height: 40px;
+    border-radius: var(--border-radius-large);
+    font-size: var(--font-size-medium);
+    font-weight: normal;
+    color: #eef0ff;
+    background-color: #475aec;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+
+  .countdown {
+    position: absolute;
+    right: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 56px;
+    height: 40px;
+    margin-left: 30px;
+    padding: 0 var(--spacing-medium);
+    border: var(--border-width-base) solid #475aec;
+    color: #475aec;
+    border-radius: var(--border-radius-base);
+  }
+}

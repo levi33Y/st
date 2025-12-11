@@ -1,0 +1,91 @@
+.container {
+  height: 100%;
+  width: 100%;
+
+  :deep(.el-button) {
+    margin: 0;
+  }
+
+  .container-header {
+    height: 4rem;
+    padding: 1rem var(--spacing-medium-plus);
+    border-bottom: 1px solid #e9ebf4;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1rem;
+
+    .app-logo {
+      width: 2rem;
+    }
+
+    .meeting-message {
+      margin-right: auto;
+
+      .meeting-title {
+        padding-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        column-gap: 0.5rem;
+        cursor: pointer;
+        color: var(--color-black);
+        font-weight: var(--font-weight-primary);
+      }
+
+      .meeting-time {
+        padding-left: 1.5rem;
+        color: var(--color-text-secondary);
+      }
+    }
+
+    .intelligent-filter {
+      padding-right: 3rem;
+      font-weight: var(--font-weight-primary);
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      column-gap: 1rem;
+
+      :deep(.el-button) {
+        & > span {
+          display: flex;
+          justify-content: center;
+          column-gap: 0.25rem;
+        }
+      }
+    }
+  }
+
+  .container-main {
+    height: calc(100vh - 4rem - 30px);
+    box-sizing: border-box;
+    display: flex;
+
+    .main-video {
+      width: 62rem;
+      padding: 1.5rem;
+      box-sizing: border-box;
+      display: flex;
+      align-items: start;
+      justify-content: center;
+      background: transparent;
+    }
+
+    .main-option {
+      padding: 1.5rem;
+      border-left: 1px solid #e9ebf4;
+      flex: 1;
+
+      :deep(.el-tabs__item) {
+        width: 4rem;
+      }
+
+      .summary-text {
+        white-space: pre-line;
+        word-wrap: break-word;
+        line-height: normal;
+      }
+    }
+  }
+}

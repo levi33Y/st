@@ -1,0 +1,31 @@
+.dialog-window-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .dialog-window-header {
+    height: 66px;
+    padding: var(--spacing-large);
+    border-bottom: var(--border-width-base) solid var(--border-color-light);
+    font-size: var(--font-size-large);
+    font-weight: var(--font-weight-primary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .dialog-window-footer {
+    height: 66px;
+    padding: var(--spacing-large);
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    border-top: var(--border-width-base) solid var(--border-color-light);
+  }
+
+  .dialog-window-content {
+    height: 328px;
+    flex: 1;
+  }
+}

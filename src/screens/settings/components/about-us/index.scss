@@ -1,0 +1,87 @@
+.settings-about-us {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  :deep(.el-button) {
+    width: 8.64rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-secondary);
+  }
+
+  .app-avatar {
+    height: 8.64rem;
+  }
+
+  .app-name {
+    margin-top: 1rem;
+    height: 2.25rem;
+    font-size: var(--font-size-extra-large);
+    font-weight: var(--font-weight-primary);
+  }
+
+  .option-skeleton {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 0.94rem;
+  }
+
+  .option-dialog {
+    margin-top: 1rem;
+  }
+
+  .option-badge {
+    margin-top: 0.94rem;
+
+    :deep(.el-button) {
+      color: var(--color-primary);
+      border-color: var(--color-primary);
+    }
+  }
+
+  .option-update {
+    margin-top: 0.94rem;
+    margin-left: 0;
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+  }
+}
+
+.common-dialog {
+  .dialog-main {
+    padding: 2rem 0.8rem 0.5rem;
+
+    .main-option {
+      font-size: 1rem;
+      display: flex;
+      grid-column-gap: 10px;
+
+      :deep(.el-button) {
+        font-size: var(--font-size-small);
+        padding: 0.5rem;
+        border-radius: 0.25rem;
+      }
+    }
+  }
+
+  .dialog-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 1.88rem;
+
+    :deep(.el-button) {
+      width: 9rem;
+      height: 2.5rem;
+      margin: 0;
+      font-size: var(--font-size-base);
+      font-weight: var(--font-weight-secondary);
+    }
+  }
+}

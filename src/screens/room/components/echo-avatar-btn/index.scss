@@ -1,0 +1,15 @@
+.echo-avatar-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.echo-avatar-logo {
+  min-height: 14px;
+  align-items: center;
+  justify-content: center;
+}
+
+.disabled {
+  pointer-events: none;
+}

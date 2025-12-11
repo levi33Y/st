@@ -1,0 +1,73 @@
+.header {
+  height: 50px;
+  flex: 0 0 50px;
+
+  ::v-deep(.right) {
+    padding-right: var(--spacing-tiny);
+  }
+
+  ::v-deep(.title) {
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-primary);
+  }
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  .user-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+
+    .settings {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      font-size: 0.75rem;
+      row-gap: 0.25rem;
+      -webkit-app-region: no-drag;
+
+      & + .settings {
+        margin-left: 1rem;
+      }
+
+      .iconfont {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .meeting-btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 24px;
+    margin-top: var(--spacing-medium);
+    width: 100%;
+    .meeting-row {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &:not(:last-child) {
+        margin-bottom: var(--spacing-medium);
+      }
+
+      .meeting-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    .divider-horizontal {
+      height: 1px;
+      width: 100%;
+      background: #e8eaec;
+    }
+  }
+}

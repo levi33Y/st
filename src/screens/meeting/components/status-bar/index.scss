@@ -1,0 +1,31 @@
+.status-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 28px;
+  flex: 0 0 28px;
+  display: flex;
+  flex-direction: row;
+  padding: 0 12px;
+  background-color: var(--background-color-base);
+  border-bottom: var(--border-width-base) solid var(--border-color-light);
+  z-index: var(--status-bar-index);
+
+  .left {
+    display: flex;
+    align-items: center;
+  }
+
+  .center {
+    flex: 1;
+    min-width: 1px;
+    min-height: 1px;
+  }
+
+  .right {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+  }
+}

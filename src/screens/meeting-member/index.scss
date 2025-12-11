@@ -1,0 +1,32 @@
+.container {
+  .search-meeting {
+    padding: 16px 24px;
+    height: 70px;
+  }
+
+  .member-list {
+    padding: 0 var(--spacing-medium-plus);
+
+    .member-item {
+      height: 64px;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid var(--border-color-light);
+
+      .member-item-label {
+        width: 56px;
+        flex-shrink: 0;
+      }
+
+      .designated-moderator-label {
+        color: #737489;
+      }
+
+      .member-item-info {
+        display: flex;
+        flex-direction: column;
+        row-gap: var(--spacing-tiny);
+      }
+    }
+  }
+}

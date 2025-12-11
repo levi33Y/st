@@ -1,0 +1,38 @@
+.container {
+  :deep(.el-dialog) {
+    padding: 0;
+    border-radius: 0.5rem;
+  }
+
+  :deep(.el-dialog__header) {
+    padding: 0;
+    border-bottom: 1px solid var(--border-color-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  :deep(.el-dialog__headerbtn) {
+    margin-left: auto;
+    font-size: var(--font-size-large);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  :deep(.el-dialog__footer) {
+    padding: 0;
+  }
+
+  .header-title {
+    flex: 1;
+    font-size: var(--font-size-large);
+    font-weight: var(--font-weight-primary);
+  }
+
+  .footer-option {
+    border-top: 1px solid var(--border-color-light);
+    padding: 1rem;
+  }
+}

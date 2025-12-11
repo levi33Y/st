@@ -1,0 +1,176 @@
+.container {
+  height: 100%;
+
+  .book-meeting-detail-info {
+    .book-meeting-info {
+      padding: var(--spacing-large);
+      background: var(--color-primary-gradient);
+
+      .meeting-title {
+        font-weight: var(--font-weight-primary);
+        font-size: var(--font-size-large);
+        margin-bottom: var(--spacing-medium-plus);
+      }
+
+      .book-meeting-time {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .time-detail {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          row-gap: var(--spacing-small);
+
+          div {
+            &:nth-child(1) {
+              font-weight: var(--font-weight-primary);
+              font-size: var(--font-size-extra-large);
+            }
+
+            &:nth-child(2) {
+              font-size: var(--font-size-small);
+            }
+          }
+        }
+
+        .time-status {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          row-gap: var(--spacing-smaller);
+
+          .total-time {
+            border-radius: 0.2rem;
+            font-size: var(--font-size-extra-small);
+            padding: var(--spacing-tiny);
+            background-color: #dddde9;
+            color: #737489;
+          }
+        }
+
+        .meeting-ongoing {
+          div {
+            &:nth-child(1) {
+              color: var(--color-primary);
+            }
+
+            &:nth-child(2) {
+              background-color: var(--color-primary-light);
+              color: var(--color-primary);
+            }
+          }
+        }
+
+        .meeting-ended {
+          div {
+            &:nth-child(1) {
+              color: var(--color-info);
+            }
+
+            &:nth-child(2) {
+              background-color: var(--color-info-light);
+              color: var(--color-info);
+            }
+          }
+        }
+      }
+    }
+
+    .book-meeting-member {
+      padding: var(--spacing-medium) var(--spacing-medium-plus);
+      display: flex;
+      flex-direction: column;
+      row-gap: var(--spacing-medium);
+
+      .member-detail-item {
+        display: flex;
+        align-items: center;
+
+        .member-item-label {
+          width: 56px;
+          flex-shrink: 0;
+        }
+
+        .member-admin-info {
+          display: flex;
+          flex-direction: column;
+          row-gap: var(--spacing-tiny);
+        }
+
+        .member-number-info {
+          display: flex;
+          column-gap: var(--spacing-tiny);
+        }
+
+        .member-list {
+          display: flex;
+          align-items: center;
+
+          .member-list-item {
+            border-radius: 50%;
+            border: 1px solid var(--color-white);
+            margin-right: -10px;
+          }
+
+          .member-more {
+            width: 36px;
+            height: 36px;
+            font-size: var(--avatar-font-size);
+            background-color: var(--color-primary-light);
+            color: var(--color-primary);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      }
+    }
+
+    .meeting-detail-content {
+      margin-bottom: var(--spacing-medium-plus);
+
+      .right-content {
+        margin-left: var(--spacing-tiny);
+      }
+      .theme-color {
+        color: var(--color-primary);
+      }
+      .intelligent-detail {
+        cursor: pointer;
+      }
+    }
+    .detail-top {
+      .icon-copy {
+        margin-left: var(--spacing-tiny);
+        cursor: pointer;
+        color: var(--color-primary);
+      }
+      .vertical-line {
+        display: inline-block;
+        margin: 0 var(--spacing-smaller);
+        border-radius: var(--border-radius-base);
+        border-left: 2px solid var(--background-color-disabled);
+        height: 12px;
+      }
+    }
+  }
+
+  .option-btn {
+    position: absolute;
+    display: flex;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 90px;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid var(--background-color-select);
+
+    ::v-deep(.el-button) {
+      width: 40%;
+    }
+  }
+}

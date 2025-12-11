@@ -1,0 +1,55 @@
+.container {
+  height: 100%;
+  padding: var(--spacing-small);
+  display: flex;
+  justify-content: space-between;
+
+  :deep(.el-input__wrapper) {
+    border-radius: var(--border-radius-large);
+  }
+
+  > div {
+    &:nth-child(1) {
+      flex: 1;
+      padding: var(--spacing-small);
+    }
+
+    &:nth-child(2) {
+      height: auto;
+      width: 0;
+      border-right: 1px solid var(--border-color-light);
+    }
+
+    &:nth-child(3) {
+      flex: 1;
+      padding: var(--spacing-small);
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      row-gap: var(--spacing-small-medium);
+    }
+  }
+
+  .host-list-item {
+    display: flex;
+    align-items: center;
+    column-gap: var(--spacing-small-medium);
+  }
+
+  .form-list-item {
+    display: flex;
+    align-items: center;
+    column-gap: var(--spacing-small-medium);
+    padding-bottom: var(--spacing-small-medium);
+
+    > span {
+      margin-right: auto;
+    }
+  }
+
+  .transfer-pre {
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--spacing-small-medium);
+  }
+}

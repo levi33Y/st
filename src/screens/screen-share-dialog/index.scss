@@ -1,0 +1,60 @@
+.screen-share-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .screen-share-body {
+    flex: 1;
+    padding: var(--spacing-medium-plus);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+
+    .screen-list {
+      margin: 0 var(--spacing-smaller);
+      display: flex;
+      justify-content: start;
+      padding: var(--spacing-small) 0;
+      gap: var(--spacing-small);
+      flex-flow: row wrap;
+    }
+  }
+
+  .screen-share-footer {
+    height: 72px;
+    border-top: 1px solid var(--border-color-base);
+    padding: 0 var(--spacing-medium-plus);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .footer-option {
+      display: flex;
+      align-items: center;
+      column-gap: var(--spacing-small);
+
+      .share-audio {
+        display: flex;
+        align-items: center;
+        column-gap: var(--spacing-smaller);
+      }
+    }
+
+    .footer-action {
+      display: flex;
+      column-gap: var(--spacing-small);
+    }
+  }
+
+  .app-screen-img {
+    width: 120px;
+    height: 68px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
