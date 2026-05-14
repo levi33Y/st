@@ -66,3 +66,5 @@ vscode 的 appId com.microsoft.VSCode
 ## patch-package
 
 yarn patch-package package-name
+
+t
